@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
-app.get('/api', (req, res) => {
-  res.json({ message: 'Hello from the Application Tier API!' });
+app.get('/', (req, res) => {
+  res.send('Hello, This achievers training! This is a simple Node.js app.');
 });
 
 app.listen(port, () => {
-  console.log(`Application Tier is running at http://localhost:${port}`);
+  console.log(`Server running at http://localhost:${port}`);
 });
